@@ -2,6 +2,9 @@ const express = require("express"); // require gareko express lai
 const app = express(); // tyo require gareko lai  call gareko
 // app vanney mathi ko variable chae throughout the project use hunchha
 
+// requiring datbase 
+require("./model/index")
+
 // setting up ejs, telling nodejs to use ejs 
 app.set('view engine','ejs')
 
