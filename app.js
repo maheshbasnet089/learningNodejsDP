@@ -30,12 +30,12 @@ app.post("/register", async(req, res) => {
 
   // new way ma garda (Destructuring object)
   const {name,password} = req.body
-  console.log(name,password)
+  // console.log(name,password)
 
   // database ma halnu paryo
   await  users.create({
-    name : name, // first name vaneko column name ho, second name vaneko form bata aako value
-    password : password
+    name : req.body.name, // first name vaneko column name ho, second name vaneko form bata aako value
+    password : req.body.password
   })
 
   res.redirect("/about")
